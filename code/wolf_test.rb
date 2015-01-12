@@ -36,8 +36,8 @@ class TestWolf < MiniTest::Unit::TestCase
 		assert_equal 17, @wolf.age
 	end
 
-	def test_wolf_howl
-		assert_equal "Hoooowwwlll!", @wolf.howl
+	def test_if_howl_is_louder_than_age_3_howl
+		assert @wolf.loud_howl?
 	end
 
 	def test_if_wolf_is_dominant_over_younger_wolves

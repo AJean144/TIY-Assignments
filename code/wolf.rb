@@ -21,10 +21,10 @@ class Wolf
 		@name = name
 		@age = age
 	end
-	def howl
-		"Hoooowwwlll!"
+	def loud_howl?
+		@age >= 3
 	end
 	def dominant_to?(younger_wolf)
-		true
+		@age > younger_wolf.age
 	end
 end
