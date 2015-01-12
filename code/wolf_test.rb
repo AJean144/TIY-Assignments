@@ -12,3 +12,20 @@
 # A pack of 5 wolves can get a water buffalo.
 # A pack of 30 wolves can eat a rhinoceros.
 # I used a lot of synonyms there in the hunting section. You don't need methods for all of them.
+
+require 'minitest/autorun'
+require 'minitest/pride'
+#require 'minitest/pride'
+require './wolf'
+
+class TestWolf < MiniTest::Unit::TestCase
+
+	def setup
+		@wolf_name = Wolf.new(:Jake, 17)
+	end
+
+	def test_wolf_name
+		assert @wolf_name
+	end
+
+end
