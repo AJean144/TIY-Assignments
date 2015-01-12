@@ -15,11 +15,16 @@
 
 class Wolf
 
-	attr_accessor :wolf_name,  :wolf_age
+	attr_accessor :name,  :age
 
-	def initialize(wolf_name, wolf_age)
-		@wolf_name = wolf_name
-		@wolf_age = wolf_age
+	def initialize(name, age)
+		@name = name
+		@age = age
 	end
-
+	def howl
+		"Hoooowwwlll!"
+	end
+	def dominant_to?(younger_wolf)
+		true
+	end
 end

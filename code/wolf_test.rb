@@ -21,11 +21,27 @@ require './wolf'
 class TestWolf < MiniTest::Unit::TestCase
 
 	def setup
-		@wolf_name = Wolf.new(:Jake, 17)
+		@wolf = Wolf.new(:Jake, 17)
+	end
+
+	def test_if_wolf_exsist
+		assert @wolf	
 	end
 
 	def test_wolf_name
-		assert @wolf_name
+		assert_equal :Jake, @wolf.name
 	end
 
+	def test_wolf_age
+		assert_equal 17, @wolf.age
+	end
+
+	def test_wolf_howl
+		assert_equal "Hoooowwwlll!", @wolf.howl
+	end
+
+	def test_if_wolf_is_dominant_over_younger_wolves
+		@young_wolf = Wolf.new(:Gary, 12)
+		assert @wolf.dominant_to?(@young_wolf)
+	end
 end
