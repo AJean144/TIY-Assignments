@@ -44,4 +44,10 @@ class TestWolf < MiniTest::Unit::TestCase
 		@young_wolf = Wolf.new(:Gary, 12)
 		assert @wolf.dominant_to?(@young_wolf)
 	end
+
 end
+
+
+
+
+

@@ -27,4 +27,5 @@ class Wolf
 	def dominant_to?(younger_wolf)
 		@age > younger_wolf.age
 	end
+
 end

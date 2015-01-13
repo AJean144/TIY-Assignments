@@ -12,3 +12,13 @@
 # A pack of 5 wolves can get a water buffalo.
 # A pack of 30 wolves can eat a rhinoceros.
 # I used a lot of synonyms there in the hunting section. You don't need methods for all of them.
+
+class Wolfpack
+
+	attr_accessor :the_pack
+
+	def initialize 
+		@the_pack = [:SnagTooth, :Rasor, :fang, :Gary]
+	end
+
+end
