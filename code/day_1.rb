@@ -50,7 +50,7 @@ end #=> ["David Rogers", "Larry David"]
 
 
 # create a list of the names Joe, Kelly, Spencer, Peter, Ivan, Andell, Angela, Jeff to use for the next five tasks.
-=> ["Joe", "Kelly", "Spencer", "Peter", "Ivan", "Andell", "Angela", "Jeff"]
+class_room = ["Joe", "Kelly", "Spencer", "Peter", "Ivan", "Andell", "Angela", "Jeff"]
 
 # access the 5th name in the list
 class_room[5] #=> "Andell"
