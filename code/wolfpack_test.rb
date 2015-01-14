@@ -17,16 +17,19 @@ require 'minitest/autorun'
 require 'minitest/pride'
 #require 'minitest/pride'
 require './wolfpack'
+require './wolf'
 
 
 class TestWolfpack < MiniTest::Unit::TestCase
 	
 	def setup
-		@pack = Wolfpack.new
-	end
+	    jake = Wolf.new("Jake", 17)
+	    @part_of_pack = [ jake ]
+	    @wolfpack = Wolfpack.new(@part_of_pack, "Leader") 
+  	end
 
-	def test_if_there_is_a_wolfpack
-		assert @pack
-	end
+	def test_wolfpack_has_wolves
+    	assert_equal @part_of_pack, @wolfpack.part_of_pack
+  	end
 
 end

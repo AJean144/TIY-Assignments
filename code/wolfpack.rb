@@ -13,12 +13,16 @@
 # A pack of 30 wolves can eat a rhinoceros.
 # I used a lot of synonyms there in the hunting section. You don't need methods for all of them.
 
+
+require './wolf'
+
 class Wolfpack
 
-	attr_accessor :the_pack
+	attr_accessor :part_of_pack
 
-	def initialize 
-		@the_pack = [:SnagTooth, :Rasor, :fang, :Gary]
+	def initialize(part_of_pack, position_in_pack) 
+		@part_of_pack = part_of_pack.select{|type| type.is_a?(Wolf) }
+		@position_in_pack = position_in_pack
 	end
 
 end
