@@ -1,4 +1,6 @@
-class Cards
+require './to_english'
+
+class Card
 
 	attr_reader :value, :suit
 
@@ -8,12 +10,12 @@ class Cards
 	end
 
 	def display
-		if value == Fixnum
-			value.to_english
-		else
-			value
-		end
-		"#{value} of #{suit}"
+	card_value = if value.is_a?(Fixnum)
+					value.to_english
+				else
+					value  
+				end
+		"#{card_value} of #{suit}"
 	end
 
 end
