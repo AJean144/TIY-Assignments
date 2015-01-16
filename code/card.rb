@@ -1,4 +1,4 @@
-class Card
+class Cards
 
 	attr_reader :value, :suit
 
@@ -8,6 +8,11 @@ class Card
 	end
 
 	def display
+		if value == Fixnum
+			value.to_english
+		else
+			value
+		end
 		"#{value} of #{suit}"
 	end
 

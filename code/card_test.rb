@@ -1,26 +1,29 @@
 require 'minitest/autorun'
 require './card'
+require './to_english'
 
-class CardTest < MiniTest::Unit::TestCase
+class CardsTest < MiniTest::Unit::TestCase
 
 	def setup
-		@card = Card.new(7, :clubs)
+		@value = (2..10).to_a + [:Jack, :Queen, :King, :Ace]
+		@suit = [ :Hearts, :Diamonds, :Clubs, :Spades ]
+		@cards = Cards.new(@value.last, @suit.last)
 	end
 
 	def test_card_exsist
-		assert @card
+		assert @cards
 	end
 
 	def test_card_has_suit
-		assert_equal :clubs, @card.suit
+		assert_equal :Spades, @cards.suit
 	end
 
 	def test_card_has_value
-		assert_equal 7, @card.value
+		assert_equal :Ace, @cards.value
 	end
 
 	def test_how_the_card_will_display
-		assert_equal "seven of :clubs", @card.display
+		assert_equal "Ace of Spades", @cards.display
 	end
 
 end
