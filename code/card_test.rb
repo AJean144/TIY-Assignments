@@ -24,5 +24,30 @@ class CardTest < MiniTest::Unit::TestCase
 		assert_equal "seven of Spades", @card.display
 	end
 
+	def test_the_jack_card_for_its_value
+		jack = Card.new(:Jack, :Spades)
+		assert_equal 11, jack.value?
+	end
+
+	def test_the_queen_card_for_its_value
+		queen = Card.new(:Queen, :Spades)
+		assert_equal 12, queen.value?
+	end
+
+	def test_the_king_card_for_its_value
+		king = Card.new(:King, :Spades)
+		assert_equal 13, king.value?
+	end
+
+	def test_the_ace_card_for_its_value
+		ace = Card.new(:Ace, :Spades)
+		assert_equal 14, ace.value?
+	end
 
 end
+
+
+
+
+
+
