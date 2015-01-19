@@ -17,4 +17,12 @@ class Player
 	def hands_value?
 		@hand.inject(0){|sum, card| sum + card.value }
 	end
+
+	def players_hand
+		"You have the #{show_cards}"
+	end
+
+	def show_cards
+		@hand.map{|cards| cards.display}.join(' and ')
+	end
 end

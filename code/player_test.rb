@@ -7,7 +7,7 @@ require './to_english'
 class PlayerTest < MiniTest::Unit::TestCase
 
 	def setup
-		cards = [Card.new(7, :Clubs), Card.new(5, :Hearts)]
+		cards = [Card.new(3, :Hearts), Card.new(9, :Spades), Card.new(5, :Clubs)]
 		@player = Player.new(cards)
 	end
 
@@ -22,7 +22,11 @@ class PlayerTest < MiniTest::Unit::TestCase
 	end
 
 	def test_the_value_of_players_hand
-		assert_equal 12, @player.hands_value?
+		assert_equal 17, @player.hands_value?
+	end
+
+	def test_how_the_players_hand_will_display
+		assert_equal "You have the three of Hearts and nine of Spades and five of Clubs", @player.players_hand
 	end
 
 end
