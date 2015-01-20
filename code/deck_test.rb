@@ -23,4 +23,9 @@ class DeckTest < MiniTest::Unit::TestCase
 		assert_kind_of Card, cards[0]
 		assert_equal 49, @deck.size
 	end
+
+	def test_is_deck_starts_out_shuffled
+		new_deck = Deck.new
+		refute @deck == new_deck
+	end
 end

@@ -1,5 +1,6 @@
 require './card'
 require './deck'
+require './dealer'
 require './to_english'
 
 class Player
@@ -23,6 +24,25 @@ class Player
 	end
 
 	def show_cards
-		@hand.map{|cards| cards.display}.join(' and ')
+		@hand.map{|cards| cards.display}.join(', ')
+	end
+
+	def dealers_hand
+		@hand.map{|cards| cards.display}.join(', ')
+	end
+
+	def wins
+		if players_hand < dealers_hand
+			"You Win!"
+		elsif players_hand > dealers_hand
+			"Dealer Wins!"
+		elsif players_hand == dealers_hand
+			"It's a tie!"
+		else
+			"Opps... Something crazy happened, Play again!"
+		end
 	end
 end
+
+
+

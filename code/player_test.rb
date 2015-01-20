@@ -1,5 +1,6 @@
 require 'minitest/autorun'
 require './player'
+require './dealer'
 require './card'
 require './deck'
 require './to_english'
@@ -26,7 +27,11 @@ class PlayerTest < MiniTest::Unit::TestCase
 	end
 
 	def test_how_the_players_hand_will_display
-		assert_equal "You have the three of Hearts and nine of Spades and five of Clubs", @player.players_hand
+		assert_equal "You have the three of Hearts, nine of Spades, five of Clubs", @player.players_hand
+	end
+
+	def test_player_can_win
+		assert_equal "You Win!", @player.wins
 	end
 
 end
