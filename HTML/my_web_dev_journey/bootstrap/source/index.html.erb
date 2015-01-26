@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Andell | My Journey</title>
+		<meta name="description" content="Inspiration for Article Intro Effects" />
+		<meta name="keywords" content="title, header, effect, scroll, inspiration, medium, web design" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body class="demo-3">
+		<div id="container" class="container intro-effect-sliced">
+			<!-- Top Navigation -->
+			<div class="codrops-top clearfix">
+				<a class="codrops-icon" href="http://ajeanwebdev.com" target="_blank"><span>Visit my Website</span></a>
+				<span class="right"><a class="codrops-icon" href="https://twitter.com/andell_a" target="_blank"><span>Visit me on Twitter!</span></a></span>
+			</div>
+			<header class="header">
+				<div class="bg-img"><img src="img/header-bg-1.jpg" alt="Sunset Background Image" /></div>
+				<div class="title">
+					<nav class="codrops-demos">
+						<a class="#" href="_index.html">Home</a>
+						<a href="#">My Story</a>
+						<a href="#">My Work</a>
+						<a href="#">About me</a>
+						<a href="#">Photos</a>
+						<a href="#">Resume</a>
+						<a href="#">Contact</a>
+					</nav>
+					<h1>Andell - The Web Developer</h1>
+					<p class="subline">My Web Dev Journey</p>
+					<p>by <strong>Andell Jean-Jacques</strong> &#8212; Posted on <%= Time.local(2015,"jan",23,15,7,1).asctime %></p>
+				</div>
+				<div class="bg-img"><img src="img/header-bg-1.jpg" alt="Sunset Background Image" /></div>
+			</header>
+			<button class="trigger" data-info="The Journey Begins"><span>Click Here!</span></button>
+			<article class="content">
+				<div>
+					<p>It all started with a little bit of javaScript...</p>
+					<p>My introduction to programming was a javaScript tutorial on <%= link_to "Lynda.com", "https://Lynda.com" %>, but I had no idea what I was getting into. I still remember my first program, very simple.<br><br><code>var name = prompt("What is your name?");</code><br><br><code>alert("Hello, " + name);</code><br><br>There was something about that moment when I saw my code work. I created a web program and it really worked! From that point on it became my mission to learn everything there is to know about web development (so I thought...) I soon realized it is almost impossible to learn "EVERYTHING" about web development, but we'll get to that later. After going through that entire javaScript series, I had no idea what to do next. I felt like I knew javaScript, I wanted to build something, but then it dawned on me that I had no idea how to use all of that newfound knowledge. About a week later I got in contact with an old friend and I informed him of what I've been learning. Turned out he was running his own little coding camp in New York and had a bunch of free, online tutorials, which would increase my knowledge. This was exactly what I was missing, I was missing structure... <a href="#">Continue the story!</a></p>
+					
+					<h3>What does Andell know about web development?</h3>
+					<p>I've been a web developer since fall of 2013 and I've learned a lot within these past months. For starters, HTML, CSS, javaScript, Wordpress and even a little PHP are languages I've learned on my own, but The Iron Yard has taught me more in one month than what I've learned within that entire time. They've taught me how to work in the Command Line, how to use Git and Github. To top it all off, I learned Ruby and how <em>to think</em> like a developer. Even though I'm self taught on the front-end side of things, I always felt like there was a gap in my understanding, something was always missing. You can read my story to learn more about my web dev journey, but for now let's get into some of the things I've learned about web development.</p>
+					
+					<h3>Let's start this off with a little bit of HTML &amp; CSS!</h3>
+					<p>HTML is an acronym for <strong style="color: #f0652a">H</strong>yper <strong style="color: #f0652a">T</strong>ext <strong style="color: #f0652a">M</strong>arkup <strong style="color: #f0652a">L</strong>anguage and CSS stands for <strong style="color: #3074b1">C</strong>ascading <strong style="color: #3074b1">S</strong>tyle <strong style="color: #3074b1">S</strong>heet. These two languages are the foundation of any website, but they should not be confused with programming languages. HTML is not a programming language, but a markup language, and you can think of it as the skeleton of a website. CSS is used for styling your HTML page and this could be thought of as the skin, and everything else needed to beautify a website. These both work together wonderfully and if implemented correctly, you can design some beautiful web pages.<br><br>The basic HTML structure looks like this:</p>
+<pre>
+	<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+ &lt;Head&gt;
+  &lt;Title&gt;My simple web page&lt;/Title&gt;
+ &lt;/Head&gt;
+ &lt;Body&gt;
+  The content for your website would go here...
+ &lt;/Body&gt;
+&lt;/html&gt;
+	</code>
+</pre>
+					<p>These HTML tags (at the absolute minimum) are the starting points of any website. There are tons of tags needed to complete a website but we'll talk about that in a few. Here's a few ways to include some CSS into your HTML.</p>
+<pre>
+	<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+ &lt;Head&gt;
+  &lt;Title&gt;My simple web page&lt;/Title&gt;
+  &lt;style&gt;
+   body {
+        background-color: blue;
+        }
+  &lt;/style&gt;
+ &lt;/Head&gt;
+ &lt;Body&gt;
+  This will make the entire background of the web page blue
+ &lt;/Body&gt;
+&lt;/html&gt;
+	</code>
+</pre>
+					<p>You can also add some CSS to your web page like so:</p>
+<pre>
+	<code>
+&lt;Body&gt;
+  &lt;h1 style="color: blue;"&gt;This will make this text blue&lt;/h1&gt;
+&lt;/Body&gt;
+	</code>
+</pre>
+					<p>The most effective and definitely recommended way to apply CSS is to create an external style sheet and point your HTML page to that file like so:</p>
+<pre>
+	<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+ &lt;Head&gt;
+  &lt;Title&gt;My simple web page&lt;/Title&gt;
+  &lt;LINK href="my_styling.css" rel="stylesheet" type="text/css"&gt;
+ &lt;/Head&gt;
+ &lt;Body&gt;
+  This will make the entire background of the web page blue
+ &lt;/Body&gt;
+&lt;/html&gt;
+	</code>
+</pre>
+					<h3>Next up, javaScript!</h3>
+					<p>It's pretty much becoming a standard for every front-end web developer to know some javaScript. Using the examples for HTML and CSS (HTML being the skeleton and CSS being the skin), javaScript should be looked at as the life force, the thing needed to bring the website to life. Knowing how to "Traverse the DOM" using javaScript will empower you to give some incredible functionality to your website. Understanding the Document Object Model (The DOM) is very important, because understanding this causes you to jump around different HTML tags, select those tags, and manipulate them using javaScript. Now let's see some javaScript!</p>
+<pre>
+<code>
+var a = 12;
+var b = 12;
+var c = a + b;
+console.log(c); // this will print out 24...  
+</code>
+</pre>
+					<p>This is a very basic example of creating javaScript variables. <%= link_to "Khanacademy.org", "https://Khanacademy.org" %> is a very helpful website for anyone learning javaScript. There's so much to say about when it comes to the things you can do with javaScript, but I have a lot more to touch on so let's move on.</p>
+					
+					<h3>Let's talk about PHP</h3>
+					<p>PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used open source general-purpose scripting language. It is especially suited for web development and is able to be embedded into HTML. Now let me start by saying that I don't know a lot of PHP and I only attempted to build an eCommerce site through a tutorial on <%= link_to "teamtreehouse.com", "https://teamtreehouse.com"%>. It was that little bit of PHP knowledge that showed me some of the powers of PHP. The syntax is still hard for me to understand even after that tutorial, but I'll try to show some PHP code.</p>
+<pre>
+<code>
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;Example&lt;/title&gt;
+ &lt;/head&gt;
+  &lt;body&gt;
+
+  &lt;?php
+   echo "Hi, I'm a PHP script!";
+  ?&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+
+					<p>What distinguishes PHP from something like client-side JavaScript is that the code is executed on the server, generating HTML which is then sent to the client (client meaning the web browser). The client would receive the results of running that script, but would not know what the underlying code was. You can even configure your web server to process all your HTML files with PHP, and then there's really no way that users can tell what you have up your sleeve. The PHP code above cannot be seen if you tried to locate it by inspecting the element within Chrome Dev Tools for example.</p>
+
+					<h3>And now, Wordpress...</h3>
+
+					<p>After our little talk about PHP, it's only right for us to start talking about Wordpress and if you have no idea what Wordpress is then I'll try and fill you in. A Content Management System (CMS) is a computer application that allows publishing, editing and modifying content, organizing, deleting as well as maintenance from a central interface. In other words, you can build a website online using this web application, because the CMS lives online and is normally downloaded to your web server. Wordpress is a CMS and is actually one of the most used CMS platforms out there. Built on PHP and mySQL, Wordpress gives you the ability to create fully functional websites and powerful blogs without having a lot of programming skills.</p>
+
+					<h3>Time to display my newfound powers... RUBY!</h3>
+					<p>Ruby is amazing. It is beautifully written and very easy to understand. It's truly object oriented and gives powers that every developer should experience. You might think that was a little over the top, but if you haven't written Ruby then maybe you should try it and see for yourself. Thanks to Brian Gates and The Iron Yard staff in Orlando, I've learned Ruby and the art of TDD (Test Driven Development). Now I know how to solve complex problems, manipulate HTML and even create games with Ruby. Let's check out the simplicity of Ruby code...</p>
+<pre>
+<code>
+my_array = (1..12).to_a
+puts my_array
+</code>
+<%= 
+my_array = (1..12).to_a 
+puts my_array
+%>
+</pre>
+					<p>That's it! That's all it takes to create an array and store it inside of a variable. Now I'll explain how this works in a minute, but really dwell on how simple that was and how easy it is to understand just by looking at it. This website even uses Ruby code to generate some of it's content like links, and even that code we saw. Let's use that same code and mess around with it a bit.</p>
+<pre>
+<code>
+my_array &lt;&lt; ['a','b','c','d','e','f','g']
+puts my_array
+</code>
+<%= my_array << ['a','b','c','d','e','f','g'] %>
+<%= puts my_array %>
+</pre>
+					<p>Now we have an array within an array, but I would really like to see both arrays as one. It's as easy as this:</p>
+<pre>
+<code>
+my_array.flatten!
+puts my_array
+</code>
+<%= my_array.flatten! %>
+<%= puts my_array %>
+</pre>
+
+
+					<p>Now let's mix things up a bit... Let's see if we can shuffle this array and get things out of order a little.</p>
+<pre>
+<code>
+my_array.shuffle
+puts my_array
+</code>
+<%= my_array.shuffle %>
+<%= puts my_array %>
+</pre>
+					<p>Look at that! Ruby is something else, and you can really have fun with it. Those are just some basic examples, but I would like to show off some complexity. Let's go crazy and create a function that will change numbers to their Roman numerals</p>
+<pre>
+<code>
+# I want a method that will convert integers into their Roman numeral representation.
+# For example:
+# 3.to_roman =&gt; "III"
+# 15.to_roman =&gt; "XV"
+class Fixnum
+
+  def to_roman
+    if self == 0
+      ""
+    elsif self &lt;= 3
+      "I" * self
+    elsif self == 4
+      "IV"
+    elsif self &lt;= 8
+      "V" + (self - 5).to_roman
+    elsif self == 9
+      "IX"
+    else
+      "X" + (self - 10).to_roman
+    end
+  end
+end
+
+def test(actual_value, expectation)
+  if actual_value == expectation
+    puts "success"
+  else
+    puts "expected #{expectation} but got #{actual_value}"
+  end
+end
+
+puts 1.to_roman #=> "I"
+puts 2.to_roman #=> "II"
+puts 4.to_roman #=> "IV"
+puts 5.to_roman #=> "V"
+puts 6.to_roman #=> "VI"
+puts 9.to_roman #=> "IX"
+puts 10.to_roman #=> "X"
+puts 25.to_roman #=> "XXV"
+</code>
+</pre>
+					<blockquote>Diamonds, a girl's best friend,<br> Ruby, a programmer's best friend</blockquote>
+					<p>Just felt like throwing that in there. Thank you for reading. If you would like to read my story about how I became a web developer, please feel free to learn more about this developer's humble beginnings.</p>
+
+					
+					<p><strong>Written by: <%= link_to "Andell Jean-Jacques", "http://ajeanwebdev.com"%></strong></p>
+				</div>
+			</article>
+			<section class="related">
+				<p>If you enjoyed this then let me know on <a class="codrops-icon" href="https://twitter.com/andell_a" target="_blank">twitter!</a></p>
+				<div><h4>I'm also pretty active on <a class="codrops-icon" href="http://instagram.com/a_jean12/" target="_blank">Instagram</a></h4></div>
+			</section>
+		</div><!-- /container -->
+		<script src="js/classie.js"></script>
+		<script>
+			(function() {
+
+				// detect if IE : from http://stackoverflow.com/a/16657946		
+				var ie = (function(){
+					var undef,rv = -1; // Return value assumes failure.
+					var ua = window.navigator.userAgent;
+					var msie = ua.indexOf('MSIE ');
+					var trident = ua.indexOf('Trident/');
+
+					if (msie > 0) {
+						// IE 10 or older => return version number
+						rv = parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+					} else if (trident > 0) {
+						// IE 11 (or newer) => return version number
+						var rvNum = ua.indexOf('rv:');
+						rv = parseInt(ua.substring(rvNum + 3, ua.indexOf('.', rvNum)), 10);
+					}
+
+					return ((rv > -1) ? rv : undef);
+				}());
+
+
+				// disable/enable scroll (mousewheel and keys) from http://stackoverflow.com/a/4770179					
+				// left: 37, up: 38, right: 39, down: 40,
+				// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+				var keys = [32, 37, 38, 39, 40], wheelIter = 0;
+
+				function preventDefault(e) {
+					e = e || window.event;
+					if (e.preventDefault)
+					e.preventDefault();
+					e.returnValue = false;  
+				}
+
+				function keydown(e) {
+					for (var i = keys.length; i--;) {
+						if (e.keyCode === keys[i]) {
+							preventDefault(e);
+							return;
+						}
+					}
+				}
+
+				function touchmove(e) {
+					preventDefault(e);
+				}
+
+				function wheel(e) {
+					// for IE 
+					//if( ie ) {
+						//preventDefault(e);
+					//}
+				}
+
+				function disable_scroll() {
+					window.onmousewheel = document.onmousewheel = wheel;
+					document.onkeydown = keydown;
+					document.body.ontouchmove = touchmove;
+				}
+
+				function enable_scroll() {
+					window.onmousewheel = document.onmousewheel = document.onkeydown = document.body.ontouchmove = null;  
+				}
+
+				var docElem = window.document.documentElement,
+					scrollVal,
+					isRevealed, 
+					noscroll, 
+					isAnimating,
+					container = document.getElementById( 'container' ),
+					trigger = container.querySelector( 'button.trigger' );
+
+				function scrollY() {
+					return window.pageYOffset || docElem.scrollTop;
+				}
+				
+				function scrollPage() {
+					scrollVal = scrollY();
+					
+					if( noscroll && !ie ) {
+						if( scrollVal < 0 ) return false;
+						// keep it that way
+						window.scrollTo( 0, 0 );
+					}
+
+					if( classie.has( container, 'notrans' ) ) {
+						classie.remove( container, 'notrans' );
+						return false;
+					}
+
+					if( isAnimating ) {
+						return false;
+					}
+					
+					if( scrollVal <= 0 && isRevealed ) {
+						toggle(0);
+					}
+					else if( scrollVal > 0 && !isRevealed ){
+						toggle(1);
+					}
+				}
+
+				function toggle( reveal ) {
+					isAnimating = true;
+					
+					if( reveal ) {
+						classie.add( container, 'modify' );
+					}
+					else {
+						noscroll = true;
+						disable_scroll();
+						classie.remove( container, 'modify' );
+					}
+
+					// simulating the end of the transition:
+					setTimeout( function() {
+						isRevealed = !isRevealed;
+						isAnimating = false;
+						if( reveal ) {
+							noscroll = false;
+							enable_scroll();
+						}
+					}, 600 );
+				}
+
+				// refreshing the page...
+				var pageScroll = scrollY();
+				noscroll = pageScroll === 0;
+				
+				disable_scroll();
+				
+				if( pageScroll ) {
+					isRevealed = true;
+					classie.add( container, 'notrans' );
+					classie.add( container, 'modify' );
+				}
+				
+				window.addEventListener( 'scroll', scrollPage );
+				trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
+			})();
+		</script>
+	</body>
+</html>
