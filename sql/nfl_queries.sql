@@ -25,4 +25,17 @@ SELECT teams.*, cities.population_change FROM teams, cities
 SELECT cities.name, teams.* FROM cities, teams
 	WHERE cities.id = teams.city_id;
 
+-- Select every state that has a team
+SELECT states.*, cities.state_id, teams.city_id FROM
+	states, cities, teams WHERE
+	states.id = cities.state_id AND
+	teams.city_id = cities.id;
+
+-- Select every team that plays in California
+SELECT states.abbr, cities.state_id, teams.* FROM
+	states, cities, teams WHERE
+	states.abbr='CA' AND
+	cities.state_id = states.id AND
+	teams.city_id = cities.id;
+
 
